@@ -1,0 +1,82 @@
+.header { grid-area: header; }
+.nav { grid-area: nav; }
+.main { grid-area: main; }
+.aside1 { grid-area: aside1; }
+.footer { grid-area: footer; }
+.aside2 { grid-area: aside2; }
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'nav nav nav nav nav nav'
+      'header header header aside2 aside2 aside2'
+      'aside1 aside1 aside1 main main main'
+      'footer footer footer footer footer footer';
+  }
+header{
+    background-color: lime;
+}
+nav{
+    background-color: navy;
+}
+footer{
+    background-color: brown;
+}
+main{
+    background-color: blueviolet;
+}
+button{
+    color: aliceblue;
+    background-color: grey;
+    border-radius: 2px;
+    border-color: cyan;
+    text-decoration: none;
+}
+button:hover{
+    color: black;
+    text-decoration: none;
+}
+button:p
+.border{
+    border-width: 3px;
+    border-style: groove;
+    background-color: rgb(123, 48, 222);
+    margin: 5px;
+    padding: 3px;
+}
+
+.tveir_dálkar{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.þrír_dálkar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.fjórar_dálkar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width:800px) {
+    .tveir_dálkar, .fjórar_dálkar{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .tveir_dálkar, .fjórar_dálkar, .þrír_dálkar{
+        display: grid;
+        grid-template-columns:1fr ;
+    }
+}
+
+.valmynd{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    justify-items: center;
+}
