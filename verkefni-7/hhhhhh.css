@@ -1,0 +1,167 @@
+.header { grid-area: header; }
+.nav { grid-area: nav; }
+.main { grid-area: main; }
+.aside1 { grid-area: aside1; }
+.footer { grid-area: footer; }
+.aside2 { grid-area: aside2; }
+
+.video{
+    display: grid;
+    justify-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'nav nav nav nav nav nav'
+      'header header header aside2 aside2 aside2'
+      'aside1 aside1 aside1 main main main'
+      'footer footer footer footer footer footer';
+  }
+header{
+    background-color: rgb(0, 198, 198);
+}
+nav{
+    background-color: rgb(0, 255, 255);
+}
+footer{
+    background-color: rgb(0, 31, 31);
+}
+main{
+    background-color: rgb(0, 101, 101);
+}
+button{
+    color: aliceblue;
+    background-color: grey;
+    border-radius: 2px;
+    border-color: cyan;
+    text-decoration: none;
+}
+button:hover{
+    color: black;
+    text-decoration: none;
+}
+.border{
+    border-width: 3px;
+    border-style: groove;
+    background-color: rgb(123, 48, 222);
+    margin: 5px;
+    padding: 3px;
+}
+
+.tveir_dálkar{  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.þrír_dálkar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.fjórar_dálkar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width:800px) {
+    .tveir_dálkar, .fjórar_dálkar{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .tveir_dálkar, .fjórar_dálkar, .þrír_dálkar{
+        display: grid;
+        grid-template-columns:1fr ;
+    }
+}
+
+.valmynd{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    justify-items: center;
+}
+
+table {
+    border: 1px solid rgb(0, 101, 101);
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: rgb(0, 101, 101);
+    border: 1px solid rgb(0, 101, 101);
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid rgb(0, 101, 101);
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid rgb(0, 101, 101);
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
